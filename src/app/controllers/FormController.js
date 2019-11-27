@@ -11,7 +11,7 @@ class FormController {
   }
 
   async store(req, res) {
-    const phoneRegex = /^\([0-9]{2}\)[0-9]{5}|[0-9]{4}-[0-9]{4}$/;
+    const phoneRegex = /^[0-9]{10,11}$/;
 
     const schema = Yup.object().shape({
       identification: Yup.string().required(),
