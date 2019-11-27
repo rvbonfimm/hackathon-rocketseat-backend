@@ -5,7 +5,7 @@ const Mail = require('../../lib/Mail')
 
 class FormController {
   async index (req, res) {
-    const forms = await Form.find();
+    const forms = await Form.find().sort( { createdAt: 1 });
 
     return res.json(forms);
   }
@@ -15,6 +15,7 @@ class FormController {
 
     const schema = Yup.object().shape({
       identification: Yup.string().required(),
+      name: Yup.string(),
       city: Yup.string(),
       phone: Yup.string().matches(phoneRegex, 'Phone is not valid'),
       email: Yup.string().email().required(),
@@ -28,7 +29,15 @@ class FormController {
       return res.status(401).json({ error: 'Data validation errors' });
     }
 
-    const { identification, city, phone, email, students_amount, course_period } = req.body;
+    const { 
+      identification, 
+      name, 
+      city, 
+      phone, 
+      email, 
+      students_amount, 
+      course_period 
+    } = req.body;
 
     const form = await Form.create(req.body);
 
@@ -39,6 +48,7 @@ class FormController {
       template: 'auto-reply',
       context: {
         identification,
+        name,
         email,
         city: city !== undefined ? city : null,
         phone: phone !== undefined ? phone : null,
