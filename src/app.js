@@ -1,6 +1,7 @@
 const routes = require('./routes');
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors');
 
 require('dotenv/config');
 
@@ -14,6 +15,7 @@ class App {
   }
 
   middlewares () {
+    this.server.use(cors());
     this.server.use(express.json());
   }
 
@@ -22,7 +24,7 @@ class App {
   }
 
   database() {
-    mongoose.connect('mongodb+srv://admin:l1n0s1st3m4s@cluster0-aed7u.mongodb.net/rsxp?retryWrites=true&w=majority',{
+    mongoose.connect(process.env.MONGODB_URI,{
       useNewUrlParser:true,
       useUnifiedTopology: true
     });
