@@ -1,0 +1,32 @@
+{
+  "name": "hackathon-rsxp",
+  "version": "1.0.0",
+  "description": "An Incredible Hackathon at the Beautiful Rocketseat Experience event (RSXP) at São Paulo city, on november, 2019.",
+  "main": "server.js",
+  "repository": "https://github.com/rvbonfimm/hackathon-rsxp",
+  "author": "dream-team",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.7.12",
+    "nodemailer": "^6.3.1",
+    "nodemailer-express-handlebars": "^3.1.0",
+    "yup": "^0.27.0"
+  },
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "devDependencies": {
+    "eslint": "^6.7.1",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "nodemon": "^2.0.1",
+    "prettier": "^1.19.1"
+  }
+}
