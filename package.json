@@ -1,9 +1,9 @@
 {
   "name": "hackathon-rsxp",
   "version": "1.0.0",
-  "description": "An Incredible Hackathon at the Beautiful Rocketseat Experience event (RSXP) at São Paulo city, on november, 2019.",
+  "description": "Hack-a-Class - Tecnologia nas Escolas",
   "main": "server.js",
-  "repository": "https://github.com/rvbonfimm/hackathon-rsxp",
+  "repository": "https://github.com/rvbonfimm/hackathon-rocketseat-backend",
   "author": "dream-team",
   "license": "MIT",
   "dependencies": {
